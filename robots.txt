@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: 4vdata.ru
+Sitemap: https://4vdata.ru/sitemap.xml
