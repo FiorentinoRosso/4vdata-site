@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <filter id="cut-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="-10" dy="14" stdDeviation="8" flood-color="#090402" flood-opacity=".22"/>
+    </filter>
+    <path id="petal" d="M0,-382 C54,-310 74,-234 0,-176 C-74,-234 -54,-310 0,-382Z"/>
+    <path id="small-petal" d="M0,-284 C37,-244 48,-199 0,-158 C-48,-199 -37,-244 0,-284Z"/>
+    <path id="leaf" d="M0,-430 C24,-386 21,-344 0,-316 C-21,-344 -24,-386 0,-430Z"/>
+    <g id="spoke">
+      <use href="#petal"/>
+      <use href="#small-petal"/>
+      <use href="#leaf"/>
+      <path d="M0,-128 L42,-218 L0,-308 L-42,-218Z"/>
+      <path d="M0,-82 L18,-145 L0,-208 L-18,-145Z"/>
+    </g>
+  </defs>
+  <rect width="1000" height="1000" fill="none"/>
+  <g transform="translate(500 500)" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#cut-shadow)">
+    <g stroke="#120704" stroke-width="24" opacity=".13">
+      <circle r="455"/>
+      <circle r="382"/>
+      <circle r="304"/>
+      <circle r="218"/>
+      <circle r="128"/>
+      <path d="M0,-455 L394,-228 L394,228 L0,455 L-394,228 L-394,-228Z"/>
+      <path d="M0,-382 L331,-191 L331,191 L0,382 L-331,191 L-331,-191Z" transform="rotate(30)"/>
+      <path d="M0,-304 L263,-152 L263,152 L0,304 L-263,152 L-263,-152Z"/>
+    </g>
+    <g stroke="#5b2a0e" stroke-width="10" opacity=".24">
+      <use href="#spoke" transform="rotate(0)"/>
+      <use href="#spoke" transform="rotate(30)"/>
+      <use href="#spoke" transform="rotate(60)"/>
+      <use href="#spoke" transform="rotate(90)"/>
+      <use href="#spoke" transform="rotate(120)"/>
+      <use href="#spoke" transform="rotate(150)"/>
+      <use href="#spoke" transform="rotate(180)"/>
+      <use href="#spoke" transform="rotate(210)"/>
+      <use href="#spoke" transform="rotate(240)"/>
+      <use href="#spoke" transform="rotate(270)"/>
+      <use href="#spoke" transform="rotate(300)"/>
+      <use href="#spoke" transform="rotate(330)"/>
+    </g>
+    <g stroke="#1a0a04" stroke-width="6" opacity=".18">
+      <circle r="438"/>
+      <circle r="360"/>
+      <circle r="280"/>
+      <circle r="196"/>
+      <circle r="104"/>
+      <path d="M0,-438 L379,-219 L379,219 L0,438 L-379,219 L-379,-219Z" transform="rotate(15)"/>
+      <path d="M0,-252 L218,-126 L218,126 L0,252 L-218,126 L-218,-126Z" transform="rotate(45)"/>
+    </g>
+    <g stroke="#f4d394" stroke-width="3" opacity=".18">
+      <circle r="454"/>
+      <circle r="303"/>
+      <circle r="127"/>
+    </g>
+  </g>
+</svg>
