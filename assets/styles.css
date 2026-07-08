@@ -19,17 +19,11 @@
   --wood-face: url("plywood-face.jpg");
   --wood-edge: url("plywood-edge.jpg");
   --plywood:
-    radial-gradient(circle at 12% 24%, rgba(255, 245, 206, .34) 0 6%, transparent 7%),
-    radial-gradient(circle at 82% 12%, rgba(75, 40, 18, .14) 0 5%, transparent 6%),
     linear-gradient(125deg, rgba(255, 241, 202, .26), rgba(105, 58, 25, .12) 48%, rgba(255, 230, 180, .16)),
     var(--wood-face);
   --plywood-dark:
     linear-gradient(125deg, rgba(255, 228, 172, .16), rgba(62, 32, 14, .36) 54%, rgba(255, 226, 170, .13)),
     var(--wood-edge);
-  --plywood-recess:
-    radial-gradient(ellipse at 50% 40%, rgba(56, 31, 15, .20), transparent 62%),
-    linear-gradient(125deg, rgba(75, 39, 17, .24), rgba(255, 233, 185, .12)),
-    var(--wood-face);
   --level-1: 0 1px 0 var(--edge-2), 0 8px 14px rgba(57, 32, 16, .16);
   --level-2: 0 1px 0 var(--edge-1), 0 2px 0 var(--edge-2), 0 12px 18px rgba(57, 32, 16, .18);
   --level-3: 0 1px 0 var(--edge-1), 0 2px 0 var(--edge-2), 0 3px 0 var(--edge-3), 0 16px 24px rgba(57, 32, 16, .20);
@@ -54,13 +48,9 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   background:
-    radial-gradient(ellipse at 12% 10%, rgba(255, 235, 181, .32) 0 12%, transparent 34%),
-    radial-gradient(ellipse at 88% 18%, rgba(70, 38, 17, .20) 0 7%, transparent 22%),
-    radial-gradient(ellipse at 22% 64%, rgba(105, 58, 25, .18) 0 10%, transparent 28%),
-    radial-gradient(ellipse at 78% 72%, rgba(255, 238, 189, .24) 0 11%, transparent 30%),
     linear-gradient(135deg, rgba(246, 211, 151, .24), rgba(152, 88, 38, .12) 46%, rgba(245, 205, 139, .18)),
     var(--wood-face);
-  background-size: auto, auto, auto, auto, auto, 1024px 512px;
+  background-size: auto, 1024px 512px;
 }
 
 img {
@@ -176,11 +166,9 @@ a {
   min-height: calc(100vh - 73px);
   padding: 58px 6vw 78px;
   background:
-    radial-gradient(ellipse at 26% 22%, rgba(255, 238, 188, .50) 0 18%, transparent 42%),
-    radial-gradient(ellipse at 72% 72%, rgba(93, 53, 25, .16) 0 16%, transparent 38%),
     linear-gradient(rgba(245, 211, 158, .10), rgba(121, 66, 29, .08)),
     var(--wood-face);
-  background-size: auto, auto, auto, 1024px 512px;
+  background-size: auto, 1024px 512px;
 }
 
 .hero-copy {
@@ -291,7 +279,6 @@ h3 {
   background:
     linear-gradient(rgba(255, 248, 232, .08), rgba(236, 218, 188, .08)) center / calc(100% - 32px) auto no-repeat,
     url("dashboard-profit.png") center / calc(100% - 32px) auto no-repeat,
-    radial-gradient(ellipse at 50% 48%, rgba(65, 36, 17, .16), transparent 62%),
     var(--plywood);
   border: 1px solid rgba(80, 47, 23, .40);
   border-radius: 8px;
@@ -329,11 +316,9 @@ h3 {
 .compare,
 .contact {
   background:
-    radial-gradient(ellipse at 16% 22%, rgba(87, 49, 23, .20) 0 10%, transparent 32%),
-    radial-gradient(ellipse at 84% 74%, rgba(255, 237, 187, .24) 0 12%, transparent 36%),
     linear-gradient(95deg, rgba(255, 246, 218, .14), rgba(94, 50, 21, .12)),
     var(--wood-face);
-  background-size: auto, auto, auto, 1024px 512px;
+  background-size: auto, 1024px 512px;
   border-top: 1px solid rgba(84, 48, 22, .38);
   border-bottom: 1px solid rgba(255, 230, 177, .35);
   box-shadow: var(--pit);
@@ -398,10 +383,7 @@ figcaption span,
   gap: 48px;
   align-items: start;
   color: var(--ink);
-  background:
-    radial-gradient(ellipse at 20% 20%, rgba(255, 240, 190, .42) 0 18%, transparent 44%),
-    radial-gradient(ellipse at 82% 54%, rgba(70, 39, 18, .20) 0 14%, transparent 38%),
-    var(--plywood);
+  background: var(--plywood);
   border-top: 1px solid rgba(255, 235, 184, .45);
   border-bottom: 1px solid rgba(80, 47, 23, .34);
   box-shadow: var(--level-1);
@@ -498,10 +480,7 @@ figcaption {
 }
 
 .result {
-  background:
-    radial-gradient(ellipse at 24% 28%, rgba(255, 239, 190, .38) 0 18%, transparent 42%),
-    radial-gradient(ellipse at 76% 64%, rgba(69, 38, 17, .16) 0 16%, transparent 40%),
-    var(--plywood);
+  background: var(--plywood);
 }
 
 .result-card {
@@ -528,9 +507,7 @@ figcaption {
 .result-grid div {
   min-height: 124px;
   padding: 20px;
-  background:
-    radial-gradient(ellipse at 50% 35%, rgba(68, 37, 17, .14), transparent 64%),
-    var(--plywood);
+  background: var(--plywood);
   border: 1px solid rgba(84, 48, 22, .32);
   border-radius: 8px;
   box-shadow: var(--pit);
