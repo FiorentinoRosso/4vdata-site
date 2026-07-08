@@ -550,6 +550,7 @@ figcaption {
 }
 
 .contact-links a {
+  position: relative;
   display: grid;
   place-items: center;
   width: 44px;
@@ -561,6 +562,33 @@ figcaption {
   box-shadow: var(--level-3);
 }
 
+.contact-links a::after {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  z-index: 3;
+  padding: 6px 8px;
+  color: #fff7dc;
+  background: var(--plywood-dark);
+  border: 1px solid rgba(62, 34, 16, .42);
+  border-radius: 6px;
+  box-shadow: var(--level-2);
+  content: attr(data-tooltip);
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 4px);
+  transition: opacity .14s ease, transform .14s ease;
+  white-space: nowrap;
+}
+
+.contact-links a:hover::after,
+.contact-links a:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
 .contact-links a:hover {
   color: #fff7dc;
   background: var(--plywood-dark);
@@ -569,6 +597,20 @@ figcaption {
 .contact-links svg {
   width: 22px;
   height: 22px;
+  fill: currentColor;
+}
+
+.max-logo {
+  width: 26px;
+  height: 26px;
+}
+
+.max-logo-bg {
+  fill: currentColor;
+  opacity: .16;
+}
+
+.max-logo-mark {
   fill: currentColor;
 }
 
