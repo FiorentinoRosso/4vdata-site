@@ -18,18 +18,11 @@
   --wood-dark: #b8753c;
   --wood-face: url("plywood-face.jpg");
   --wood-edge: url("plywood-edge.jpg");
-  --pyrography: url("pyrography.svg");
   --burn-rim: inset 0 0 0 1px rgba(38, 15, 5, .42), inset 0 -9px 16px rgba(70, 28, 8, .24), inset 9px 11px 18px rgba(255, 242, 207, .13);
-  --carved-voids:
-    radial-gradient(110px 34px at 3% 14%, rgba(20, 8, 3, .48) 0 44%, rgba(93, 39, 11, .34) 45% 53%, transparent 54%),
-    radial-gradient(92px 30px at 98% 78%, rgba(18, 7, 3, .45) 0 45%, rgba(101, 43, 12, .32) 46% 54%, transparent 55%),
-    radial-gradient(72px 24px at 16% 96%, rgba(20, 8, 3, .36) 0 43%, rgba(94, 40, 12, .28) 44% 53%, transparent 54%);
   --carved-plywood:
-    var(--carved-voids),
-    var(--pyrography),
     linear-gradient(145deg, rgba(255, 248, 222, .56), rgba(201, 125, 52, .13) 48%, rgba(255, 229, 178, .32)),
     var(--wood-face);
-  --carved-size: 1240px 760px, 1320px 820px, 1040px 720px, 1180px 680px, auto, 1024px 512px;
+  --carved-size: auto, 1024px 512px;
   --plywood:
     linear-gradient(145deg, rgba(255, 249, 224, .50), rgba(204, 132, 60, .10) 52%, rgba(255, 229, 178, .26)),
     var(--wood-face);
@@ -451,23 +444,6 @@ h3 {
 .footer > * {
   position: relative;
   z-index: 1;
-}
-
-.hero::before,
-.section::before,
-.footer::before {
-  position: absolute;
-  inset: 14px;
-  z-index: 0;
-  pointer-events: none;
-  border: 1px solid rgba(35, 14, 5, .36);
-  border-radius: 12px;
-  background:
-    var(--pyrography) left 18px top 14px / 820px 470px repeat,
-    linear-gradient(90deg, transparent 0 97%, rgba(37, 16, 6, .18) 98%, transparent 100%) 0 0 / 86px 100% repeat-x;
-  content: "";
-  opacity: .18;
-  mix-blend-mode: multiply;
 }
 
 .topbar {
