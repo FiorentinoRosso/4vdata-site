@@ -16,14 +16,20 @@
   --wood-light: #f6d89f;
   --wood-mid: #e0ad6b;
   --wood-dark: #b8753c;
+  --wood-face: url("plywood-face.jpg");
+  --wood-edge: url("plywood-edge.jpg");
   --plywood:
-    radial-gradient(circle at 12% 24%, rgba(255, 246, 204, .55) 0 6%, transparent 7%),
-    radial-gradient(circle at 82% 12%, rgba(100, 55, 24, .12) 0 5%, transparent 6%),
-    repeating-linear-gradient(96deg, rgba(255, 255, 255, .14) 0 2px, transparent 2px 10px, rgba(103, 57, 24, .10) 10px 12px),
-    linear-gradient(125deg, var(--wood-light), var(--wood-mid) 48%, #efc98a);
+    radial-gradient(circle at 12% 24%, rgba(255, 245, 206, .34) 0 6%, transparent 7%),
+    radial-gradient(circle at 82% 12%, rgba(75, 40, 18, .14) 0 5%, transparent 6%),
+    linear-gradient(125deg, rgba(255, 241, 202, .26), rgba(105, 58, 25, .12) 48%, rgba(255, 230, 180, .16)),
+    var(--wood-face);
   --plywood-dark:
-    repeating-linear-gradient(96deg, rgba(255, 255, 255, .08) 0 2px, transparent 2px 9px, rgba(43, 23, 10, .18) 9px 11px),
-    linear-gradient(125deg, #c88949, #9f6130 54%, #c98948);
+    linear-gradient(125deg, rgba(255, 228, 172, .16), rgba(62, 32, 14, .36) 54%, rgba(255, 226, 170, .13)),
+    var(--wood-edge);
+  --plywood-recess:
+    radial-gradient(ellipse at 50% 40%, rgba(56, 31, 15, .20), transparent 62%),
+    linear-gradient(125deg, rgba(75, 39, 17, .24), rgba(255, 233, 185, .12)),
+    var(--wood-face);
   --level-1: 0 1px 0 var(--edge-2), 0 8px 14px rgba(57, 32, 16, .16);
   --level-2: 0 1px 0 var(--edge-1), 0 2px 0 var(--edge-2), 0 12px 18px rgba(57, 32, 16, .18);
   --level-3: 0 1px 0 var(--edge-1), 0 2px 0 var(--edge-2), 0 3px 0 var(--edge-3), 0 16px 24px rgba(57, 32, 16, .20);
@@ -38,7 +44,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--wood-dark);
+  background: #b98249;
 }
 
 body {
@@ -48,12 +54,13 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   background:
-    radial-gradient(ellipse at 12% 10%, rgba(255, 235, 181, .48) 0 12%, transparent 34%),
+    radial-gradient(ellipse at 12% 10%, rgba(255, 235, 181, .32) 0 12%, transparent 34%),
     radial-gradient(ellipse at 88% 18%, rgba(70, 38, 17, .20) 0 7%, transparent 22%),
-    radial-gradient(ellipse at 22% 64%, rgba(105, 58, 25, .22) 0 10%, transparent 28%),
-    radial-gradient(ellipse at 78% 72%, rgba(255, 238, 189, .38) 0 11%, transparent 30%),
-    repeating-linear-gradient(88deg, rgba(255, 255, 255, .10) 0 3px, transparent 3px 18px, rgba(78, 42, 18, .11) 18px 21px),
-    linear-gradient(135deg, #e8b873, #d69b57 46%, #efca8d);
+    radial-gradient(ellipse at 22% 64%, rgba(105, 58, 25, .18) 0 10%, transparent 28%),
+    radial-gradient(ellipse at 78% 72%, rgba(255, 238, 189, .24) 0 11%, transparent 30%),
+    linear-gradient(135deg, rgba(246, 211, 151, .24), rgba(152, 88, 38, .12) 46%, rgba(245, 205, 139, .18)),
+    var(--wood-face);
+  background-size: auto, auto, auto, auto, auto, 1024px 512px;
 }
 
 img {
@@ -170,7 +177,10 @@ a {
   padding: 58px 6vw 78px;
   background:
     radial-gradient(ellipse at 26% 22%, rgba(255, 238, 188, .50) 0 18%, transparent 42%),
-    radial-gradient(ellipse at 72% 72%, rgba(93, 53, 25, .16) 0 16%, transparent 38%);
+    radial-gradient(ellipse at 72% 72%, rgba(93, 53, 25, .16) 0 16%, transparent 38%),
+    linear-gradient(rgba(245, 211, 158, .10), rgba(121, 66, 29, .08)),
+    var(--wood-face);
+  background-size: auto, auto, auto, 1024px 512px;
 }
 
 .hero-copy {
@@ -212,11 +222,12 @@ h2 {
   border-radius: 8px;
   box-shadow: var(--level-5);
   text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 h1 {
   margin-bottom: 26px;
-  font-size: clamp(42px, 6.6vw, 78px);
+  font-size: clamp(40px, 4.4vw, 60px);
   line-height: .98;
   letter-spacing: 0;
 }
@@ -239,6 +250,7 @@ h3 {
   box-shadow: var(--level-3);
   font-size: 20px;
   line-height: 1.16;
+  overflow-wrap: break-word;
 }
 
 .lead {
@@ -277,6 +289,8 @@ h3 {
   align-items: center;
   padding: 16px;
   background:
+    linear-gradient(rgba(255, 248, 232, .08), rgba(236, 218, 188, .08)) center / calc(100% - 32px) auto no-repeat,
+    url("dashboard-profit.png") center / calc(100% - 32px) auto no-repeat,
     radial-gradient(ellipse at 50% 48%, rgba(65, 36, 17, .16), transparent 62%),
     var(--plywood);
   border: 1px solid rgba(80, 47, 23, .40);
@@ -285,7 +299,10 @@ h3 {
 }
 
 .hero-visual img {
+  flex: 0 1 100%;
   width: 100%;
+  min-width: 0;
+  height: auto;
   border: 1px solid rgba(69, 40, 19, .38);
   border-radius: 6px;
   box-shadow: var(--level-2);
@@ -314,8 +331,9 @@ h3 {
   background:
     radial-gradient(ellipse at 16% 22%, rgba(87, 49, 23, .20) 0 10%, transparent 32%),
     radial-gradient(ellipse at 84% 74%, rgba(255, 237, 187, .24) 0 12%, transparent 36%),
-    repeating-linear-gradient(95deg, rgba(255, 255, 255, .08) 0 2px, transparent 2px 12px, rgba(69, 38, 17, .10) 12px 14px),
-    #d79d59;
+    linear-gradient(95deg, rgba(255, 246, 218, .14), rgba(94, 50, 21, .12)),
+    var(--wood-face);
+  background-size: auto, auto, auto, 1024px 512px;
   border-top: 1px solid rgba(84, 48, 22, .38);
   border-bottom: 1px solid rgba(255, 230, 177, .35);
   box-shadow: var(--pit);
@@ -653,22 +671,36 @@ figcaption {
   }
 
   h1 {
-    font-size: 32px;
+    display: block;
+    width: 100%;
+    font-size: 21px;
     line-height: 1.06;
+    text-wrap: wrap;
     overflow-wrap: anywhere;
+    white-space: normal;
   }
 
   h2 {
+    display: block;
+    width: 100%;
     font-size: 29px;
+    text-wrap: wrap;
   }
 
   h3 {
+    display: block;
+    width: 100%;
     font-size: 19px;
+    text-wrap: wrap;
   }
 
   .eyebrow {
+    display: block;
+    width: 100%;
     max-width: 100%;
-    font-size: 12px;
+    font-size: 11px;
+    text-align: center;
+    text-wrap: wrap;
     overflow-wrap: anywhere;
   }
 
