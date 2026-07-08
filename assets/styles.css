@@ -21,11 +21,11 @@
   --mandala-panel: url("mandala-panel.svg");
   --burn-rim: inset 0 0 0 1px rgba(38, 15, 5, .42), inset 0 -9px 16px rgba(70, 28, 8, .24), inset 9px 11px 18px rgba(255, 242, 207, .13);
   --carved-plywood:
-    radial-gradient(circle at 50% 50%, rgba(5, 3, 2, .16), transparent 38%),
+    radial-gradient(ellipse at 50% 50%, rgba(5, 3, 2, .14), transparent 48%),
     var(--mandala-panel),
     linear-gradient(145deg, rgba(255, 248, 222, .62), rgba(201, 125, 52, .12) 48%, rgba(255, 229, 178, .34)),
     var(--wood-face);
-  --carved-size: 780px 780px, 820px 820px, auto, 1024px 512px;
+  --carved-size: 1540px 870px, 1540px 870px, auto, 1024px 512px;
   --plywood:
     linear-gradient(145deg, rgba(255, 249, 224, .50), rgba(204, 132, 60, .10) 52%, rgba(255, 229, 178, .26)),
     var(--wood-face);
@@ -358,8 +358,14 @@ h3 {
 }
 
 .lead {
+  display: block;
   max-width: 560px;
+  padding: 14px 18px 16px;
   color: #4f3826;
+  background: var(--plywood);
+  border: 1px solid rgba(84, 48, 22, .28);
+  border-radius: 8px;
+  box-shadow: var(--level-2), var(--burn-rim);
   font-size: 21px;
 }
 
@@ -443,6 +449,8 @@ h3 {
 }
 
 .topbar {
+  background: var(--plywood);
+  background-size: auto, 1024px 512px;
   box-shadow: var(--level-4), var(--burn-rim);
 }
 

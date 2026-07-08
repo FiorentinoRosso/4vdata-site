@@ -1,58 +1,122 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <filter id="cut-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="-10" dy="14" stdDeviation="8" flood-color="#090402" flood-opacity=".22"/>
+    <filter id="deepShadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="-15" dy="18" stdDeviation="9" flood-color="#080402" flood-opacity=".50"/>
     </filter>
-    <path id="petal" d="M0,-382 C54,-310 74,-234 0,-176 C-74,-234 -54,-310 0,-382Z"/>
-    <path id="small-petal" d="M0,-284 C37,-244 48,-199 0,-158 C-48,-199 -37,-244 0,-284Z"/>
-    <path id="leaf" d="M0,-430 C24,-386 21,-344 0,-316 C-21,-344 -24,-386 0,-430Z"/>
-    <g id="spoke">
-      <use href="#petal"/>
-      <use href="#small-petal"/>
+    <filter id="rimShadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="-7" dy="9" stdDeviation="4" flood-color="#120704" flood-opacity=".45"/>
+    </filter>
+    <linearGradient id="ply" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3d49c"/>
+      <stop offset=".52" stop-color="#d9ad75"/>
+      <stop offset="1" stop-color="#f8dfad"/>
+    </linearGradient>
+    <linearGradient id="burn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b1308"/>
+      <stop offset=".5" stop-color="#6a3516"/>
+      <stop offset="1" stop-color="#1b0a04"/>
+    </linearGradient>
+    <path id="petal" d="M0,-385 C70,-302 78,-218 0,-154 C-78,-218 -70,-302 0,-385Z"/>
+    <path id="leaf" d="M0,-455 C30,-402 28,-352 0,-318 C-28,-352 -30,-402 0,-455Z"/>
+    <g id="mandalaSpoke">
       <use href="#leaf"/>
-      <path d="M0,-128 L42,-218 L0,-308 L-42,-218Z"/>
-      <path d="M0,-82 L18,-145 L0,-208 L-18,-145Z"/>
+      <use href="#petal"/>
+      <path d="M0,-320 L58,-230 L0,-140 L-58,-230Z"/>
+      <path d="M0,-248 L34,-178 L0,-108 L-34,-178Z"/>
     </g>
   </defs>
-  <rect width="1000" height="1000" fill="none"/>
-  <g transform="translate(500 500)" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#cut-shadow)">
-    <g stroke="#120704" stroke-width="24" opacity=".13">
-      <circle r="455"/>
-      <circle r="382"/>
-      <circle r="304"/>
-      <circle r="218"/>
-      <circle r="128"/>
-      <path d="M0,-455 L394,-228 L394,228 L0,455 L-394,228 L-394,-228Z"/>
-      <path d="M0,-382 L331,-191 L331,191 L0,382 L-331,191 L-331,-191Z" transform="rotate(30)"/>
-      <path d="M0,-304 L263,-152 L263,152 L0,304 L-263,152 L-263,-152Z"/>
+
+  <rect width="1600" height="900" fill="none"/>
+
+  <g opacity=".92" filter="url(#deepShadow)">
+    <path fill="url(#ply)" d="M28 64H430L358 152H164L126 210H28Z"/>
+    <path fill="url(#ply)" d="M1572 64H1170L1242 152H1436L1474 210H1572Z"/>
+    <path fill="url(#ply)" d="M28 836H430L358 748H164L126 690H28Z"/>
+    <path fill="url(#ply)" d="M1572 836H1170L1242 748H1436L1474 690H1572Z"/>
+    <path fill="url(#ply)" d="M0 322H330L420 450L330 578H0V506H280L322 450L280 394H0Z"/>
+    <path fill="url(#ply)" d="M1600 322H1270L1180 450L1270 578H1600V506H1320L1278 450L1320 394H1600Z"/>
+  </g>
+
+  <g transform="translate(800 450)" filter="url(#deepShadow)">
+    <g fill="none" stroke="url(#burn)" stroke-linejoin="round" stroke-linecap="round">
+      <circle r="430" stroke-width="42"/>
+      <circle r="360" stroke-width="34"/>
+      <circle r="286" stroke-width="28"/>
+      <circle r="214" stroke-width="22"/>
+      <circle r="142" stroke-width="18"/>
+      <circle r="72" stroke-width="14"/>
+      <path d="M0,-430 L372,-215 L372,215 L0,430 L-372,215 L-372,-215Z" stroke-width="34"/>
+      <path d="M0,-344 L298,-172 L298,172 L0,344 L-298,172 L-298,-172Z" transform="rotate(30)" stroke-width="28"/>
+      <path d="M0,-258 L223,-129 L223,129 L0,258 L-223,129 L-223,-129Z" stroke-width="22"/>
     </g>
-    <g stroke="#5b2a0e" stroke-width="10" opacity=".24">
-      <use href="#spoke" transform="rotate(0)"/>
-      <use href="#spoke" transform="rotate(30)"/>
-      <use href="#spoke" transform="rotate(60)"/>
-      <use href="#spoke" transform="rotate(90)"/>
-      <use href="#spoke" transform="rotate(120)"/>
-      <use href="#spoke" transform="rotate(150)"/>
-      <use href="#spoke" transform="rotate(180)"/>
-      <use href="#spoke" transform="rotate(210)"/>
-      <use href="#spoke" transform="rotate(240)"/>
-      <use href="#spoke" transform="rotate(270)"/>
-      <use href="#spoke" transform="rotate(300)"/>
-      <use href="#spoke" transform="rotate(330)"/>
+
+    <g fill="none" stroke="url(#ply)" stroke-linejoin="round" stroke-linecap="round" filter="url(#rimShadow)">
+      <circle r="430" stroke-width="26"/>
+      <circle r="360" stroke-width="22"/>
+      <circle r="286" stroke-width="18"/>
+      <circle r="214" stroke-width="15"/>
+      <circle r="142" stroke-width="12"/>
+      <circle r="72" stroke-width="10"/>
+      <path d="M0,-430 L372,-215 L372,215 L0,430 L-372,215 L-372,-215Z" stroke-width="22"/>
+      <path d="M0,-344 L298,-172 L298,172 L0,344 L-298,172 L-298,-172Z" transform="rotate(30)" stroke-width="18"/>
+      <path d="M0,-258 L223,-129 L223,129 L0,258 L-223,129 L-223,-129Z" stroke-width="15"/>
     </g>
-    <g stroke="#1a0a04" stroke-width="6" opacity=".18">
-      <circle r="438"/>
-      <circle r="360"/>
-      <circle r="280"/>
-      <circle r="196"/>
-      <circle r="104"/>
-      <path d="M0,-438 L379,-219 L379,219 L0,438 L-379,219 L-379,-219Z" transform="rotate(15)"/>
-      <path d="M0,-252 L218,-126 L218,126 L0,252 L-218,126 L-218,-126Z" transform="rotate(45)"/>
+
+    <g fill="none" stroke="url(#burn)" stroke-width="21" stroke-linejoin="round" stroke-linecap="round" opacity=".95">
+      <use href="#mandalaSpoke" transform="rotate(0)"/>
+      <use href="#mandalaSpoke" transform="rotate(30)"/>
+      <use href="#mandalaSpoke" transform="rotate(60)"/>
+      <use href="#mandalaSpoke" transform="rotate(90)"/>
+      <use href="#mandalaSpoke" transform="rotate(120)"/>
+      <use href="#mandalaSpoke" transform="rotate(150)"/>
+      <use href="#mandalaSpoke" transform="rotate(180)"/>
+      <use href="#mandalaSpoke" transform="rotate(210)"/>
+      <use href="#mandalaSpoke" transform="rotate(240)"/>
+      <use href="#mandalaSpoke" transform="rotate(270)"/>
+      <use href="#mandalaSpoke" transform="rotate(300)"/>
+      <use href="#mandalaSpoke" transform="rotate(330)"/>
     </g>
-    <g stroke="#f4d394" stroke-width="3" opacity=".18">
-      <circle r="454"/>
-      <circle r="303"/>
-      <circle r="127"/>
+
+    <g fill="none" stroke="url(#ply)" stroke-width="13" stroke-linejoin="round" stroke-linecap="round" filter="url(#rimShadow)">
+      <use href="#mandalaSpoke" transform="rotate(0)"/>
+      <use href="#mandalaSpoke" transform="rotate(30)"/>
+      <use href="#mandalaSpoke" transform="rotate(60)"/>
+      <use href="#mandalaSpoke" transform="rotate(90)"/>
+      <use href="#mandalaSpoke" transform="rotate(120)"/>
+      <use href="#mandalaSpoke" transform="rotate(150)"/>
+      <use href="#mandalaSpoke" transform="rotate(180)"/>
+      <use href="#mandalaSpoke" transform="rotate(210)"/>
+      <use href="#mandalaSpoke" transform="rotate(240)"/>
+      <use href="#mandalaSpoke" transform="rotate(270)"/>
+      <use href="#mandalaSpoke" transform="rotate(300)"/>
+      <use href="#mandalaSpoke" transform="rotate(330)"/>
     </g>
+
+    <g fill="none" stroke="#2a1107" stroke-width="5" opacity=".72">
+      <circle r="398"/>
+      <circle r="324"/>
+      <circle r="250"/>
+      <circle r="178"/>
+      <circle r="108"/>
+      <path d="M0,-398 L345,-199 L345,199 L0,398 L-345,199 L-345,-199Z" transform="rotate(15)"/>
+      <path d="M0,-300 L260,-150 L260,150 L0,300 L-260,150 L-260,-150Z" transform="rotate(45)"/>
+      <path d="M0,-222 L192,-111 L192,111 L0,222 L-192,111 L-192,-111Z"/>
+    </g>
+  </g>
+
+  <g opacity=".74" fill="none" stroke="url(#burn)" stroke-width="18" stroke-linejoin="round" filter="url(#rimShadow)">
+    <path d="M90 106H348L276 178H164L118 252H40"/>
+    <path d="M1510 106H1252L1324 178H1436L1482 252H1560"/>
+    <path d="M90 794H348L276 722H164L118 648H40"/>
+    <path d="M1510 794H1252L1324 722H1436L1482 648H1560"/>
+    <path d="M74 450H286"/>
+    <path d="M1314 450H1526"/>
+  </g>
+
+  <g opacity=".46" fill="none" stroke="#f7dba8" stroke-width="4" stroke-linejoin="round">
+    <path d="M54 80H404L330 172H184L136 230H54"/>
+    <path d="M1546 80H1196L1270 172H1416L1464 230H1546"/>
+    <path d="M54 820H404L330 728H184L136 670H54"/>
+    <path d="M1546 820H1196L1270 728H1416L1464 670H1546"/>
   </g>
 </svg>
