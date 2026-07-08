@@ -104,20 +104,121 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 800;
+  gap: 12px;
+  flex: 0 0 auto;
+  min-height: 48px;
+  font-size: 18px;
+  font-weight: 900;
+  perspective: 760px;
 }
 
-.brand-mark {
+.brand-object {
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
-  color: var(--cut);
-  background: var(--plywood);
-  border: 1px solid rgba(60, 33, 15, .46);
-  border-radius: 6px;
-  box-shadow: var(--level-4);
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  filter: drop-shadow(-5px 8px 6px rgba(40, 21, 10, .42));
+}
+
+.brand-object-inner {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  transform-style: preserve-3d;
+  animation: logo-spin 7s linear infinite;
+}
+
+.brand:hover .brand-object-inner {
+  animation-play-state: paused;
+}
+
+.brand-object-front,
+.brand-object-back,
+.brand-object-side {
+  position: absolute;
+  display: block;
+}
+
+.brand-object-front,
+.brand-object-back {
+  inset: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.brand-object-front {
+  transform: translateZ(6px);
+}
+
+.brand-object-back {
+  background: url("logo-mark.svg?v=20260708-logo3d") center / cover no-repeat;
+  filter: brightness(.72) saturate(.9);
+  transform: rotateY(180deg) translateZ(6px);
+}
+
+.brand-object-side {
+  background: linear-gradient(90deg, var(--edge-5), var(--edge-3));
+  box-shadow: inset 0 0 0 1px rgba(46, 24, 10, .32);
+}
+
+.brand-object-side.right,
+.brand-object-side.left {
+  top: 6px;
+  width: 12px;
+  height: 30px;
+}
+
+.brand-object-side.right {
+  right: -6px;
+  transform: rotateY(90deg);
+}
+
+.brand-object-side.left {
+  left: -6px;
+  transform: rotateY(90deg);
+}
+
+.brand-object-side.top,
+.brand-object-side.bottom {
+  left: 6px;
+  width: 30px;
+  height: 12px;
+}
+
+.brand-object-side.top {
+  top: -6px;
+  transform: rotateX(90deg);
+}
+
+.brand-object-side.bottom {
+  bottom: -6px;
+  transform: rotateX(90deg);
+}
+
+.brand-wordmark {
+  color: var(--ink);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotateX(-12deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(-12deg) rotateY(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-object-inner {
+    animation: none;
+    transform: rotateX(-12deg) rotateY(-24deg);
+  }
 }
 
 .nav {
