@@ -13,11 +13,11 @@
   <meta property="og:title" content="Аналитика селлера для Wildberries и Ozon">
   <meta property="og:description" content="Кабинет аналитики под экономику селлера: прибыль, реклама, остатки, план-факт и ИИ-советы по решениям.">
   <meta property="og:url" content="https://4vdata.ru/">
-  <meta property="og:image" content="https://4vdata.ru/assets/dashboard-profit.png?v=20260708-finance-reference">
+  <meta property="og:image" content="https://4vdata.ru/assets/site-bg-reference.png?v=20260708-reference-ui">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Аналитика селлера для Wildberries и Ozon">
   <meta name="twitter:description" content="Индивидуальная аналитика селлера: прибыль, реклама, остатки, план-факт и ИИ-советы.">
-  <meta name="twitter:image" content="https://4vdata.ru/assets/dashboard-profit.png?v=20260708-finance-reference">
+  <meta name="twitter:image" content="https://4vdata.ru/assets/site-bg-reference.png?v=20260708-reference-ui">
   <link rel="icon" href="assets/logo-mark.svg?v=20260708-logo" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/logo-mark.png?v=20260708-logo">
   <script type="application/ld+json">
@@ -31,7 +31,7 @@
         "url": "https://4vdata.ru/",
         "email": "info@4vdata.ru",
         "logo": "https://4vdata.ru/assets/logo.svg?v=20260708-logo",
-        "image": "https://4vdata.ru/assets/dashboard-profit.png?v=20260708-finance-reference"
+        "image": "https://4vdata.ru/assets/site-bg-reference.png?v=20260708-reference-ui"
       },
       {
         "@type": "WebSite",
@@ -64,7 +64,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="assets/styles.css?v=20260708-logo3d-layered-mandala">
+  <link rel="stylesheet" href="assets/styles.css?v=20260708-reference-ui">
 </head>
 <body>
   <header class="topbar">
@@ -106,8 +106,64 @@
           <span>Под ваши правила расчёта</span>
         </div>
       </div>
-      <div class="hero-visual" aria-label="Пример кабинета">
-        <img src="assets/dashboard-profit.png?v=20260708-finance-reference" width="1440" height="900" fetchpriority="high" decoding="async" alt="Кабинет аналитики селлера: прибыль, реклама и остатки">
+      <div class="hero-visual reference-board" aria-label="Пример кабинета">
+        <article class="ref-card ref-note">
+          <div class="ref-title-row">
+            <span class="ref-avatar"></span>
+            <span class="ref-line long"></span>
+          </div>
+          <span class="ref-line full"></span>
+          <span class="ref-line full"></span>
+          <span class="ref-line mid"></span>
+          <div class="ref-list">
+            <span class="dot gold"></span><span class="ref-line"></span>
+            <span class="dot copper"></span><span class="ref-line"></span>
+            <span class="dot gray"></span><span class="ref-line"></span>
+          </div>
+        </article>
+        <div class="ref-card-row">
+          <article class="ref-card ref-chart ref-bars" aria-label="Столбчатый график прибыли">
+            <div class="ref-title-row">
+              <span class="ref-avatar"></span>
+              <span><span class="ref-line title"></span><span class="ref-line accent"></span></span>
+            </div>
+            <div class="bar-chart" aria-hidden="true">
+              <i style="--h: 31%"></i><i style="--h: 44%"></i><i style="--h: 56%"></i><i style="--h: 52%"></i><i style="--h: 48%"></i><i style="--h: 64%"></i><i style="--h: 72%"></i><i style="--h: 53%"></i><i style="--h: 46%"></i><i style="--h: 63%"></i><i style="--h: 78%"></i><i style="--h: 94%"></i>
+            </div>
+            <div class="ref-foot"><span></span><span></span><span class="dot gold"></span><span class="dot gray"></span></div>
+          </article>
+          <article class="ref-card ref-chart ref-line-card" aria-label="Линейный график плана">
+            <div class="ref-title-row">
+              <span class="ref-avatar"></span>
+              <span><span class="ref-line title"></span><span class="ref-line accent short"></span></span>
+            </div>
+            <svg class="line-chart" viewBox="0 0 320 150" aria-hidden="true">
+              <path class="grid" d="M22 20H304M22 52H304M22 84H304M22 116H304"/>
+              <path class="guides" d="M54 20V130M108 20V130M162 20V130M216 20V130M270 20V130"/>
+              <polyline points="24,126 58,88 88,92 120,62 154,84 184,96 214,62 244,42 274,68 306,34"/>
+              <g>
+                <circle cx="24" cy="126" r="4"/><circle cx="58" cy="88" r="4"/><circle cx="88" cy="92" r="4"/><circle cx="120" cy="62" r="4"/><circle cx="154" cy="84" r="4"/><circle cx="184" cy="96" r="4"/><circle cx="214" cy="62" r="4"/><circle cx="244" cy="42" r="4"/><circle cx="274" cy="68" r="4"/><circle cx="306" cy="34" r="4"/>
+              </g>
+            </svg>
+            <div class="ref-foot"><span></span><span></span><span class="dot copper"></span><span class="dot gray"></span></div>
+          </article>
+          <article class="ref-card ref-chart ref-donut-card" aria-label="Кольцевая диаграмма расходов">
+            <div class="ref-title-row">
+              <span class="ref-avatar"></span>
+              <span><span class="ref-line title"></span><span class="ref-line accent"></span></span>
+            </div>
+            <div class="donut-layout">
+              <span class="donut" aria-hidden="true"></span>
+              <div class="legend-lines">
+                <span><i class="dot gold"></i><b></b></span>
+                <span><i class="dot copper"></i><b></b></span>
+                <span><i class="dot gray"></i><b></b></span>
+                <span><i class="dot sand"></i><b></b></span>
+              </div>
+            </div>
+            <div class="ref-foot"><span></span><span></span><span class="dot gold"></span><span class="dot gray"></span></div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -194,22 +250,54 @@
         <h2>Не витрина графиков, а рабочий экран для решений</h2>
       </div>
       <div class="screen-grid">
-        <figure>
-          <img src="assets/dashboard-profit.png?v=20260708-finance-reference" width="1440" height="900" loading="lazy" decoding="async" alt="Экран аналитики прибыли, плана и расходов селлера">
+        <figure class="ref-card ref-chart ref-bars">
+          <div class="ref-title-row">
+            <span class="ref-avatar"></span>
+            <span><span class="ref-line title"></span><span class="ref-line accent"></span></span>
+          </div>
+          <div class="bar-chart" aria-hidden="true">
+            <i style="--h: 32%"></i><i style="--h: 45%"></i><i style="--h: 58%"></i><i style="--h: 54%"></i><i style="--h: 50%"></i><i style="--h: 65%"></i><i style="--h: 73%"></i><i style="--h: 55%"></i><i style="--h: 48%"></i><i style="--h: 64%"></i><i style="--h: 80%"></i><i style="--h: 94%"></i>
+          </div>
+          <div class="ref-foot"><span></span><span></span><span class="dot gold"></span><span class="dot gray"></span></div>
           <figcaption>
             <strong>Прибыль, план и расходы</strong>
             <span>Главная картина месяца: выручка, расходы, маржа, отклонения от плана.</span>
           </figcaption>
         </figure>
-        <figure>
-          <img src="assets/dashboard-ads.png?v=20260708-finance-reference" width="1440" height="900" loading="lazy" decoding="async" alt="Экран аналитики рекламы и ДРР селлера">
+        <figure class="ref-card ref-chart ref-line-card">
+          <div class="ref-title-row">
+            <span class="ref-avatar"></span>
+            <span><span class="ref-line title"></span><span class="ref-line accent short"></span></span>
+          </div>
+          <svg class="line-chart" viewBox="0 0 320 150" aria-hidden="true">
+            <path class="grid" d="M22 20H304M22 52H304M22 84H304M22 116H304"/>
+            <path class="guides" d="M54 20V130M108 20V130M162 20V130M216 20V130M270 20V130"/>
+            <polyline points="24,126 58,88 88,92 120,62 154,84 184,96 214,62 244,42 274,68 306,34"/>
+            <g>
+              <circle cx="24" cy="126" r="4"/><circle cx="58" cy="88" r="4"/><circle cx="88" cy="92" r="4"/><circle cx="120" cy="62" r="4"/><circle cx="154" cy="84" r="4"/><circle cx="184" cy="96" r="4"/><circle cx="214" cy="62" r="4"/><circle cx="244" cy="42" r="4"/><circle cx="274" cy="68" r="4"/><circle cx="306" cy="34" r="4"/>
+            </g>
+          </svg>
+          <div class="ref-foot"><span></span><span></span><span class="dot copper"></span><span class="dot gray"></span></div>
           <figcaption>
             <strong>Реклама и ДРР</strong>
             <span>Видно, какие карточки окупаются, а где бюджет работает против прибыли.</span>
           </figcaption>
         </figure>
-        <figure>
-          <img src="assets/dashboard-stock.png?v=20260708-finance-reference" width="1440" height="900" loading="lazy" decoding="async" alt="Экран аналитики остатков и допоставки селлера">
+        <figure class="ref-card ref-chart ref-donut-card">
+          <div class="ref-title-row">
+            <span class="ref-avatar"></span>
+            <span><span class="ref-line title"></span><span class="ref-line accent"></span></span>
+          </div>
+          <div class="donut-layout">
+            <span class="donut" aria-hidden="true"></span>
+            <div class="legend-lines">
+              <span><i class="dot gold"></i><b></b></span>
+              <span><i class="dot copper"></i><b></b></span>
+              <span><i class="dot gray"></i><b></b></span>
+              <span><i class="dot sand"></i><b></b></span>
+            </div>
+          </div>
+          <div class="ref-foot"><span></span><span></span><span class="dot gold"></span><span class="dot gray"></span></div>
           <figcaption>
             <strong>Остатки и поставки</strong>
             <span>Риски обнуления, дни запаса и товары, которые надо довезти первыми.</span>
