@@ -1,6 +1,6 @@
 :root {
   --ink: #2c1b10;
-  --muted: #75583f;
+  --muted: #3f2a1b;
   --line: rgba(93, 55, 25, .35);
   --edge-1: #d7a160;
   --edge-2: #c58b4a;
@@ -395,6 +395,8 @@ figcaption span,
 .compare li,
 .result-grid span {
   color: var(--muted);
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(255, 241, 201, .22);
 }
 
 .solution {
