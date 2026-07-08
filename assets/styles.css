@@ -19,17 +19,18 @@
   --wood-face: url("plywood-face.jpg");
   --wood-edge: url("plywood-edge.jpg");
   --plywood:
-    linear-gradient(125deg, rgba(255, 241, 202, .26), rgba(105, 58, 25, .12) 48%, rgba(255, 230, 180, .16)),
+    linear-gradient(145deg, rgba(255, 249, 224, .50), rgba(204, 132, 60, .10) 52%, rgba(255, 229, 178, .26)),
     var(--wood-face);
   --plywood-dark:
-    linear-gradient(125deg, rgba(255, 228, 172, .16), rgba(62, 32, 14, .36) 54%, rgba(255, 226, 170, .13)),
+    linear-gradient(145deg, rgba(80, 46, 25, .84), rgba(24, 14, 9, .88)),
     var(--wood-edge);
-  --level-1: 0 1px 0 var(--edge-2), 0 8px 14px rgba(57, 32, 16, .16);
-  --level-2: 0 1px 0 var(--edge-1), 0 2px 0 var(--edge-2), 0 12px 18px rgba(57, 32, 16, .18);
-  --level-3: 0 1px 0 var(--edge-1), 0 2px 0 var(--edge-2), 0 3px 0 var(--edge-3), 0 16px 24px rgba(57, 32, 16, .20);
-  --level-4: 0 1px 0 var(--edge-1), 0 2px 0 var(--edge-2), 0 3px 0 var(--edge-3), 0 4px 0 var(--edge-4), 0 20px 28px rgba(57, 32, 16, .22);
-  --level-5: 0 1px 0 var(--edge-1), 0 2px 0 var(--edge-2), 0 3px 0 var(--edge-3), 0 4px 0 var(--edge-4), 0 5px 0 var(--edge-5), 0 24px 34px rgba(57, 32, 16, .25);
-  --pit: inset 0 1px 0 rgba(255, 240, 190, .45), inset 0 8px 18px rgba(58, 33, 17, .30), inset 0 -8px 20px rgba(255, 230, 174, .18);
+  --base: #28170d;
+  --level-1: 0 2px 0 var(--edge-2), -5px 7px 10px rgba(20, 11, 6, .38);
+  --level-2: 0 1px 0 var(--edge-1), 0 3px 0 var(--edge-2), 0 5px 0 var(--edge-4), -8px 11px 16px rgba(20, 11, 6, .44);
+  --level-3: 0 1px 0 var(--edge-1), 0 3px 0 var(--edge-2), 0 5px 0 var(--edge-3), 0 7px 0 var(--edge-5), -11px 15px 22px rgba(20, 11, 6, .48);
+  --level-4: 0 1px 0 var(--edge-1), 0 3px 0 var(--edge-2), 0 5px 0 var(--edge-3), 0 7px 0 var(--edge-4), 0 9px 0 var(--edge-5), -15px 20px 28px rgba(20, 11, 6, .52);
+  --level-5: 0 1px 0 var(--edge-1), 0 3px 0 var(--edge-2), 0 5px 0 var(--edge-3), 0 7px 0 var(--edge-4), 0 10px 0 var(--edge-5), -20px 26px 36px rgba(20, 11, 6, .58);
+  --pit: inset 0 5px 0 rgba(32, 17, 8, .42), inset -10px 14px 24px rgba(24, 13, 7, .35), inset 0 -1px 0 rgba(255, 235, 184, .18);
 }
 
 * {
@@ -38,7 +39,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: #b98249;
+  background: var(--base);
 }
 
 body {
@@ -48,14 +49,24 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   background:
-    linear-gradient(135deg, rgba(246, 211, 151, .24), rgba(152, 88, 38, .12) 46%, rgba(245, 205, 139, .18)),
-    var(--wood-face);
-  background-size: auto, 1024px 512px;
+    linear-gradient(145deg, rgba(73, 43, 24, .72), rgba(21, 12, 7, .92)),
+    var(--wood-edge);
+  background-size: auto, 900px auto;
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+main,
+section,
+.hero-copy,
+.hero-visual,
+.section-head,
+.result-card,
+.contact-box {
+  min-width: 0;
 }
 
 a {
@@ -74,7 +85,7 @@ a {
   padding: 16px 6vw 21px;
   background: var(--plywood);
   border-bottom: 1px solid var(--line);
-  box-shadow: var(--level-3);
+  box-shadow: var(--level-4);
 }
 
 .brand {
@@ -89,8 +100,8 @@ a {
   place-items: center;
   width: 34px;
   height: 34px;
-  color: #fff7dc;
-  background: var(--plywood-dark);
+  color: var(--cut);
+  background: var(--plywood);
   border: 1px solid rgba(60, 33, 15, .46);
   border-radius: 6px;
   box-shadow: var(--level-4);
@@ -145,8 +156,8 @@ a {
 }
 
 .button.primary {
-  color: #fff7dc;
-  background: var(--plywood-dark);
+  color: var(--cut);
+  background: var(--plywood);
 }
 
 .button.secondary {
@@ -164,11 +175,15 @@ a {
   gap: 48px;
   align-items: center;
   min-height: calc(100vh - 73px);
+  margin: 34px 4vw;
   padding: 58px 6vw 78px;
   background:
     linear-gradient(rgba(245, 211, 158, .10), rgba(121, 66, 29, .08)),
     var(--wood-face);
   background-size: auto, 1024px 512px;
+  border: 1px solid rgba(255, 231, 179, .34);
+  border-radius: 16px;
+  box-shadow: var(--level-5);
 }
 
 .hero-copy {
@@ -181,11 +196,11 @@ a {
   max-width: 100%;
   margin: 0 0 14px;
   padding: 6px 10px;
-  color: #fff7dc;
-  background: var(--plywood-dark);
+  color: var(--cut);
+  background: var(--plywood);
   border: 1px solid rgba(56, 31, 15, .38);
   border-radius: 6px;
-  box-shadow: var(--level-2);
+  box-shadow: var(--level-3);
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0;
@@ -282,7 +297,7 @@ h3 {
     var(--plywood);
   border: 1px solid rgba(80, 47, 23, .40);
   border-radius: 8px;
-  box-shadow: var(--pit);
+  box-shadow: var(--level-4);
 }
 
 .hero-visual img {
@@ -297,7 +312,12 @@ h3 {
 }
 
 .section {
+  margin: 34px 4vw;
   padding: 86px 6vw;
+  background: var(--plywood);
+  border: 1px solid rgba(255, 231, 179, .30);
+  border-radius: 16px;
+  box-shadow: var(--level-4);
 }
 
 .section-head {
@@ -321,7 +341,7 @@ h3 {
   background-size: auto, 1024px 512px;
   border-top: 1px solid rgba(84, 48, 22, .38);
   border-bottom: 1px solid rgba(255, 230, 177, .35);
-  box-shadow: var(--pit);
+  box-shadow: var(--level-4);
 }
 
 .pain-grid {
@@ -358,8 +378,8 @@ figure,
   width: 38px;
   height: 38px;
   margin-bottom: 24px;
-  color: #fff7dc;
-  background: var(--plywood-dark);
+  color: var(--cut);
+  background: var(--plywood);
   border: 1px solid rgba(62, 34, 16, .42);
   border-radius: 6px;
   box-shadow: var(--level-4);
@@ -386,11 +406,11 @@ figcaption span,
   background: var(--plywood);
   border-top: 1px solid rgba(255, 235, 184, .45);
   border-bottom: 1px solid rgba(80, 47, 23, .34);
-  box-shadow: var(--level-1);
+  box-shadow: var(--level-4);
 }
 
 .solution .eyebrow {
-  color: #fff7dc;
+  color: var(--cut);
 }
 
 .solution-copy p:not(.eyebrow) {
@@ -490,7 +510,7 @@ figcaption {
 }
 
 .result-card .eyebrow {
-  color: #fff7dc;
+  color: var(--cut);
 }
 
 .result-card h2 {
@@ -510,7 +530,7 @@ figcaption {
   background: var(--plywood);
   border: 1px solid rgba(84, 48, 22, .32);
   border-radius: 8px;
-  box-shadow: var(--pit);
+  box-shadow: var(--level-2);
 }
 
 .result-grid strong,
@@ -624,11 +644,13 @@ figcaption {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  margin: 34px 4vw 0;
   padding: 30px 6vw;
   color: #5c422f;
   background: var(--plywood);
-  border-top: 1px solid rgba(84, 48, 22, .34);
-  box-shadow: inset 0 5px 0 rgba(255, 236, 184, .24);
+  border: 1px solid rgba(84, 48, 22, .34);
+  border-radius: 16px 16px 0 0;
+  box-shadow: var(--level-3);
 }
 
 @media (max-width: 1050px) {
@@ -677,6 +699,8 @@ figcaption {
 
   .hero,
   .section {
+    width: calc(100vw - 24px);
+    margin: 22px 12px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -684,8 +708,8 @@ figcaption {
   .hero {
     gap: 28px;
     padding-top: 36px;
-    width: 100%;
-    max-width: 100vw;
+    width: auto;
+    max-width: none;
     overflow: hidden;
   }
 
@@ -702,7 +726,7 @@ figcaption {
   h2 {
     display: block;
     width: 100%;
-    font-size: 29px;
+    font-size: 24px;
     text-wrap: wrap;
   }
 
@@ -717,15 +741,17 @@ figcaption {
     display: block;
     width: 100%;
     max-width: 100%;
-    font-size: 11px;
+    font-size: 9px;
     text-align: center;
     text-wrap: wrap;
     overflow-wrap: anywhere;
+    white-space: normal;
   }
 
   .hero-visual {
-    width: calc(100vw - 40px);
-    max-width: calc(100vw - 40px);
+    display: block;
+    width: 100%;
+    max-width: 100%;
     padding: 10px;
     overflow: hidden;
   }
@@ -738,17 +764,18 @@ figcaption {
 
   .lead,
   .wide-text {
+    width: 100%;
     max-width: 100%;
     overflow-wrap: anywhere;
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .hero-copy,
   .section-head,
   .contact p {
-    width: calc(100vw - 40px);
+    width: 100%;
     min-width: 0;
-    max-width: calc(100vw - 40px);
+    max-width: 100%;
     overflow-wrap: anywhere;
   }
 
@@ -776,6 +803,8 @@ figcaption {
 
   .footer {
     flex-direction: column;
+    width: calc(100vw - 24px);
+    margin: 22px 12px 0;
     padding: 24px 20px;
   }
 }
