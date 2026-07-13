@@ -76,7 +76,7 @@
       ym(110597182, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
   </script>
   <!-- /Yandex.Metrika counter -->
-  <link rel="stylesheet" href="assets/styles.css?v=20260708-reference-ui">
+  <link rel="stylesheet" href="assets/styles.css?v=20260713-seller-visuals">
 </head>
 <body>
   <noscript><div><img src="https://mc.yandex.ru/watch/110597182" style="position:absolute; left:-9999px;" alt=""></div></noscript>
@@ -120,61 +120,76 @@
         </div>
       </div>
       <div class="hero-visual reference-board" aria-label="Пример кабинета">
-        <article class="ref-card ref-note">
-          <div class="ref-title-row">
+        <article class="ref-card ref-note seller-note">
+          <div class="seller-note-head">
             <span class="ref-avatar"></span>
-            <span class="ref-line long"></span>
+            <span><b>Кабинет собственника</b><small>Ozon · июль</small></span>
           </div>
-          <span class="ref-line full"></span>
-          <span class="ref-line full"></span>
-          <span class="ref-line mid"></span>
-          <div class="ref-list">
-            <span class="dot gold"></span><span class="ref-line"></span>
-            <span class="dot copper"></span><span class="ref-line"></span>
-            <span class="dot gray"></span><span class="ref-line"></span>
+          <div class="seller-note-list">
+            <span><i class="dot gold"></i><b>108%</b><small>план месяца</small></span>
+            <span><i class="dot copper"></i><b>12,8%</b><small>ДРР</small></span>
+            <span><i class="dot gray"></i><b>18 SKU</b><small>риск обнуления</small></span>
           </div>
         </article>
         <div class="ref-card-row">
-          <article class="ref-card ref-chart ref-bars" aria-label="Столбчатый график прибыли">
-            <div class="ref-title-row">
+          <article class="ref-card ref-chart ref-bars seller-profit-card" aria-label="Пример дашборда прибыли">
+            <div class="ref-title-row dashboard-title">
               <span class="ref-avatar"></span>
-              <span><span class="ref-line title"></span><span class="ref-line accent"></span></span>
+              <span><b>Прибыль и план</b><small>выручка · расходы · маржа</small></span>
             </div>
-            <div class="bar-chart" aria-hidden="true">
-              <i style="--h: 31%"></i><i style="--h: 44%"></i><i style="--h: 56%"></i><i style="--h: 52%"></i><i style="--h: 48%"></i><i style="--h: 64%"></i><i style="--h: 72%"></i><i style="--h: 53%"></i><i style="--h: 46%"></i><i style="--h: 63%"></i><i style="--h: 78%"></i><i style="--h: 94%"></i>
+            <div class="mini-kpis">
+              <span><small>Выручка</small><b>18,4 млн ₽</b></span>
+              <span><small>Прибыль</small><b>4,7 млн ₽</b></span>
+              <span><small>План</small><b>108%</b></span>
             </div>
-            <div class="ref-foot"><span></span><span></span><span class="dot gold"></span><span class="dot gray"></span></div>
+            <div class="dashboard-bars" aria-hidden="true">
+              <span><i class="rev" style="--h: 48%"></i><i class="cost" style="--h: 36%"></i><i class="profit" style="--h: 18%"></i><small>1 нед</small></span>
+              <span><i class="rev" style="--h: 58%"></i><i class="cost" style="--h: 39%"></i><i class="profit" style="--h: 24%"></i><small>2 нед</small></span>
+              <span><i class="rev" style="--h: 68%"></i><i class="cost" style="--h: 45%"></i><i class="profit" style="--h: 31%"></i><small>3 нед</small></span>
+              <span><i class="rev" style="--h: 82%"></i><i class="cost" style="--h: 52%"></i><i class="profit" style="--h: 34%"></i><small>4 нед</small></span>
+            </div>
+            <div class="mini-legend"><span><i class="dot gold"></i>выручка</span><span><i class="dot copper"></i>расходы</span><span><i class="dot gray"></i>прибыль</span></div>
           </article>
-          <article class="ref-card ref-chart ref-line-card" aria-label="Линейный график плана">
-            <div class="ref-title-row">
+          <article class="ref-card ref-chart ref-line-card seller-ads-card" aria-label="Пример дашборда рекламы">
+            <div class="ref-title-row dashboard-title">
               <span class="ref-avatar"></span>
-              <span><span class="ref-line title"></span><span class="ref-line accent short"></span></span>
+              <span><b>Реклама и ДРР</b><small>расходы · ROAS · карточки</small></span>
             </div>
-            <svg class="line-chart" viewBox="0 0 320 150" aria-hidden="true">
+            <div class="mini-kpis">
+              <span><small>Расходы</small><b>1,32 млн ₽</b></span>
+              <span><small>ДРР</small><b>12,8%</b></span>
+              <span><small>ROAS</small><b>7,8×</b></span>
+            </div>
+            <svg class="line-chart seller-line" viewBox="0 0 320 150" aria-hidden="true">
               <path class="grid" d="M22 20H304M22 52H304M22 84H304M22 116H304"/>
               <path class="guides" d="M54 20V130M108 20V130M162 20V130M216 20V130M270 20V130"/>
-              <polyline points="24,126 58,88 88,92 120,62 154,84 184,96 214,62 244,42 274,68 306,34"/>
+              <polyline class="plan-line" points="24,110 58,94 88,98 120,78 154,88 184,92 214,66 244,58 274,74 306,50"/>
+              <polyline class="profit-line" points="24,126 58,88 88,92 120,62 154,84 184,96 214,62 244,42 274,68 306,34"/>
+              <polyline class="drr-line" points="24,82 58,70 88,76 120,86 154,72 184,64 214,78 244,86 274,72 306,68"/>
               <g>
                 <circle cx="24" cy="126" r="4"/><circle cx="58" cy="88" r="4"/><circle cx="88" cy="92" r="4"/><circle cx="120" cy="62" r="4"/><circle cx="154" cy="84" r="4"/><circle cx="184" cy="96" r="4"/><circle cx="214" cy="62" r="4"/><circle cx="244" cy="42" r="4"/><circle cx="274" cy="68" r="4"/><circle cx="306" cy="34" r="4"/>
               </g>
             </svg>
-            <div class="ref-foot"><span></span><span></span><span class="dot copper"></span><span class="dot gray"></span></div>
+            <div class="mini-legend"><span><i class="dot gold"></i>выручка</span><span><i class="dot copper"></i>ДРР</span><span><i class="dot gray"></i>план</span></div>
           </article>
-          <article class="ref-card ref-chart ref-donut-card" aria-label="Кольцевая диаграмма расходов">
-            <div class="ref-title-row">
+          <article class="ref-card ref-chart ref-donut-card seller-stock-card" aria-label="Пример дашборда остатков">
+            <div class="ref-title-row dashboard-title">
               <span class="ref-avatar"></span>
-              <span><span class="ref-line title"></span><span class="ref-line accent"></span></span>
+              <span><b>Остатки и поставки</b><small>запас · риск · приоритет</small></span>
+            </div>
+            <div class="mini-kpis">
+              <span><small>SKU</small><b>312</b></span>
+              <span><small>Риск</small><b>18 арт.</b></span>
+              <span><small>К закупке</small><b>3,6 млн ₽</b></span>
             </div>
             <div class="donut-layout">
-              <span class="donut" aria-hidden="true"></span>
-              <div class="legend-lines">
-                <span><i class="dot gold"></i><b></b></span>
-                <span><i class="dot copper"></i><b></b></span>
-                <span><i class="dot gray"></i><b></b></span>
-                <span><i class="dot sand"></i><b></b></span>
+              <span class="donut stock-donut" aria-hidden="true"><b>18</b><small>SKU</small></span>
+              <div class="stock-list">
+                <span><b>Органайзер «Линия»</b><small>7 дн.</small><i style="--w: 26%"></i></span>
+                <span><b>Лампа «Аура»</b><small>11 дн.</small><i style="--w: 39%"></i></span>
+                <span><b>Столик «Луна»</b><small>14 дн.</small><i style="--w: 52%"></i></span>
               </div>
             </div>
-            <div class="ref-foot"><span></span><span></span><span class="dot gold"></span><span class="dot gray"></span></div>
           </article>
         </div>
       </div>
@@ -263,54 +278,72 @@
         <h2>Не витрина графиков, а рабочий экран для решений</h2>
       </div>
       <div class="screen-grid">
-        <figure class="ref-card ref-chart ref-bars">
-          <div class="ref-title-row">
+        <figure class="ref-card ref-chart ref-bars seller-profit-card">
+          <div class="ref-title-row dashboard-title">
             <span class="ref-avatar"></span>
-            <span><span class="ref-line title"></span><span class="ref-line accent"></span></span>
+            <span><b>Прибыль и план</b><small>выручка · расходы · маржа</small></span>
           </div>
-          <div class="bar-chart" aria-hidden="true">
-            <i style="--h: 32%"></i><i style="--h: 45%"></i><i style="--h: 58%"></i><i style="--h: 54%"></i><i style="--h: 50%"></i><i style="--h: 65%"></i><i style="--h: 73%"></i><i style="--h: 55%"></i><i style="--h: 48%"></i><i style="--h: 64%"></i><i style="--h: 80%"></i><i style="--h: 94%"></i>
+          <div class="mini-kpis">
+            <span><small>Выручка</small><b>18,4 млн ₽</b></span>
+            <span><small>Прибыль</small><b>4,7 млн ₽</b></span>
+            <span><small>План</small><b>108%</b></span>
           </div>
-          <div class="ref-foot"><span></span><span></span><span class="dot gold"></span><span class="dot gray"></span></div>
+          <div class="dashboard-bars" aria-hidden="true">
+            <span><i class="rev" style="--h: 48%"></i><i class="cost" style="--h: 36%"></i><i class="profit" style="--h: 18%"></i><small>1 нед</small></span>
+            <span><i class="rev" style="--h: 58%"></i><i class="cost" style="--h: 39%"></i><i class="profit" style="--h: 24%"></i><small>2 нед</small></span>
+            <span><i class="rev" style="--h: 68%"></i><i class="cost" style="--h: 45%"></i><i class="profit" style="--h: 31%"></i><small>3 нед</small></span>
+            <span><i class="rev" style="--h: 82%"></i><i class="cost" style="--h: 52%"></i><i class="profit" style="--h: 34%"></i><small>4 нед</small></span>
+          </div>
+          <div class="mini-legend"><span><i class="dot gold"></i>выручка</span><span><i class="dot copper"></i>расходы</span><span><i class="dot gray"></i>прибыль</span></div>
           <figcaption>
             <strong>Прибыль, план и расходы</strong>
             <span>Главная картина месяца: выручка, расходы, маржа, отклонения от плана.</span>
           </figcaption>
         </figure>
-        <figure class="ref-card ref-chart ref-line-card">
-          <div class="ref-title-row">
+        <figure class="ref-card ref-chart ref-line-card seller-ads-card">
+          <div class="ref-title-row dashboard-title">
             <span class="ref-avatar"></span>
-            <span><span class="ref-line title"></span><span class="ref-line accent short"></span></span>
+            <span><b>Реклама и ДРР</b><small>расходы · ROAS · карточки</small></span>
           </div>
-          <svg class="line-chart" viewBox="0 0 320 150" aria-hidden="true">
+          <div class="mini-kpis">
+            <span><small>Расходы</small><b>1,32 млн ₽</b></span>
+            <span><small>ДРР</small><b>12,8%</b></span>
+            <span><small>ROAS</small><b>7,8×</b></span>
+          </div>
+          <svg class="line-chart seller-line" viewBox="0 0 320 150" aria-hidden="true">
             <path class="grid" d="M22 20H304M22 52H304M22 84H304M22 116H304"/>
             <path class="guides" d="M54 20V130M108 20V130M162 20V130M216 20V130M270 20V130"/>
-            <polyline points="24,126 58,88 88,92 120,62 154,84 184,96 214,62 244,42 274,68 306,34"/>
+            <polyline class="plan-line" points="24,110 58,94 88,98 120,78 154,88 184,92 214,66 244,58 274,74 306,50"/>
+            <polyline class="profit-line" points="24,126 58,88 88,92 120,62 154,84 184,96 214,62 244,42 274,68 306,34"/>
+            <polyline class="drr-line" points="24,82 58,70 88,76 120,86 154,72 184,64 214,78 244,86 274,72 306,68"/>
             <g>
               <circle cx="24" cy="126" r="4"/><circle cx="58" cy="88" r="4"/><circle cx="88" cy="92" r="4"/><circle cx="120" cy="62" r="4"/><circle cx="154" cy="84" r="4"/><circle cx="184" cy="96" r="4"/><circle cx="214" cy="62" r="4"/><circle cx="244" cy="42" r="4"/><circle cx="274" cy="68" r="4"/><circle cx="306" cy="34" r="4"/>
             </g>
           </svg>
-          <div class="ref-foot"><span></span><span></span><span class="dot copper"></span><span class="dot gray"></span></div>
+          <div class="mini-legend"><span><i class="dot gold"></i>выручка</span><span><i class="dot copper"></i>ДРР</span><span><i class="dot gray"></i>план</span></div>
           <figcaption>
             <strong>Реклама и ДРР</strong>
             <span>Видно, какие карточки окупаются, а где бюджет работает против прибыли.</span>
           </figcaption>
         </figure>
-        <figure class="ref-card ref-chart ref-donut-card">
-          <div class="ref-title-row">
+        <figure class="ref-card ref-chart ref-donut-card seller-stock-card">
+          <div class="ref-title-row dashboard-title">
             <span class="ref-avatar"></span>
-            <span><span class="ref-line title"></span><span class="ref-line accent"></span></span>
+            <span><b>Остатки и поставки</b><small>запас · риск · приоритет</small></span>
+          </div>
+          <div class="mini-kpis">
+            <span><small>SKU</small><b>312</b></span>
+            <span><small>Риск</small><b>18 арт.</b></span>
+            <span><small>К закупке</small><b>3,6 млн ₽</b></span>
           </div>
           <div class="donut-layout">
-            <span class="donut" aria-hidden="true"></span>
-            <div class="legend-lines">
-              <span><i class="dot gold"></i><b></b></span>
-              <span><i class="dot copper"></i><b></b></span>
-              <span><i class="dot gray"></i><b></b></span>
-              <span><i class="dot sand"></i><b></b></span>
+            <span class="donut stock-donut" aria-hidden="true"><b>18</b><small>SKU</small></span>
+            <div class="stock-list">
+              <span><b>Органайзер «Линия»</b><small>7 дн.</small><i style="--w: 26%"></i></span>
+              <span><b>Лампа «Аура»</b><small>11 дн.</small><i style="--w: 39%"></i></span>
+              <span><b>Столик «Луна»</b><small>14 дн.</small><i style="--w: 52%"></i></span>
             </div>
           </div>
-          <div class="ref-foot"><span></span><span></span><span class="dot gold"></span><span class="dot gray"></span></div>
           <figcaption>
             <strong>Остатки и поставки</strong>
             <span>Риски обнуления, дни запаса и товары, которые надо довезти первыми.</span>
