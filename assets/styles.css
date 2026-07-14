@@ -1672,14 +1672,17 @@ figure,
     width: min(280px, 42vw);
   }
 
-  .ref-card-row {
-    grid-template-columns: minmax(0, 1fr);
-  }
 }
 
 @media (min-width: 761px) and (max-height: 940px) {
   .ref-card-row {
     bottom: -34px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1050px) and (max-height: 940px) {
+  .ref-card-row {
+    bottom: -92px;
   }
 }
 
@@ -1727,6 +1730,7 @@ figure,
     left: 12px;
     right: 12px;
     bottom: -124px;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
 
