@@ -3,7 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Аналитика продавца Ozon — демонстрация</title>
+<title>Демо аналитики продавца Ozon | 4V Data</title>
+<meta name="description" content="Интерактивная демонстрация кабинета аналитики Ozon: выручка, прибыль, план, ДРР, остатки и товары на синтетических данных.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://4vdata.ru/ozon-seller-dashboard-demo.html">
+<meta property="og:type" content="website"><meta property="og:locale" content="ru_RU"><meta property="og:site_name" content="4V Data"><meta property="og:title" content="Демо аналитики продавца Ozon"><meta property="og:description" content="Интерактивный кабинет с прибылью, планом, ДРР и остатками на синтетических данных."><meta property="og:url" content="https://4vdata.ru/ozon-seller-dashboard-demo.html"><meta property="og:image" content="https://4vdata.ru/assets/og-4vdata.jpg">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Демонстрация аналитики продавца Ozon","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://4vdata.ru/ozon-seller-dashboard-demo.html","description":"Интерактивная демонстрация кабинета аналитики Ozon на синтетических данных.","author":{"@id":"https://4vdata.ru/#organization"}}</script>
+<!-- Yandex.Metrika counter --><script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=110597182','ym');ym(110597182,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script><!-- /Yandex.Metrika counter -->
 <style>
 *,*::before,*::after{box-sizing:border-box}*{margin:0}button,input{font:inherit}button{cursor:pointer}
 :root{--bg:#0f1117;--p:#171b26;--p2:#1e2333;--bd:rgba(255,255,255,.075);--tx:#e8eaf0;--mu:#7f879d;--bl:#5b9cf6;--gr:#49d783;--am:#ffbd2e;--rd:#f56b73;--vi:#a783ff}
@@ -98,5 +105,6 @@ const tooltip=$('tooltip');function showTip(e){const el=e.target.closest('[data-
 function activateTab(name){document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x.dataset.tab===name));document.querySelectorAll('.mobile-page').forEach(x=>x.classList.toggle('active',x.dataset.page===name));hideTip()}
 document.querySelectorAll('.quick button').forEach(b=>b.onclick=()=>{to.value=END;from.value=b.dataset.days==='all'?START:new Date(Date.parse(END)-(Number(b.dataset.days)-1)*DAY).toISOString().slice(0,10);document.querySelectorAll('.quick button').forEach(x=>x.classList.toggle('active',x===b));update()});[from,to].forEach(x=>x.onchange=()=>{document.querySelectorAll('.quick button').forEach(b=>b.classList.remove('active'));update()});document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>activateTab(b.dataset.tab));$('prevPage').onclick=()=>{if(page){page--;renderCards()}};$('nextPage').onclick=()=>{if((page+1)*4<productData.length){page++;renderCards()}};update();activateTab(new URLSearchParams(location.search).get('tab')||'overview');
 </script>
+<script src="assets/site.js?v=20260714" defer></script>
 </body>
 </html>

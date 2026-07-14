@@ -1,9 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://4vdata.ru/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+  <url><loc>https://4vdata.ru/</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://4vdata.ru/ozon-seller-dashboard-demo.html</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://4vdata.ru/analitika-ozon/</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://4vdata.ru/analitika-wildberries/</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://4vdata.ru/pribyl-i-opiu-sellera/</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://4vdata.ru/analitika-reklamy-drr/</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://4vdata.ru/ostatki-i-postavki/</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://4vdata.ru/avtomatizaciya-otchetnosti/</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://4vdata.ru/bezopasnost-dannyh/</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://4vdata.ru/stoimost-i-process/</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://4vdata.ru/o-kompanii/</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://4vdata.ru/keisy/individualnaya-analitika-sellera/</loc><lastmod>2026-07-14</lastmod></url>
 </urlset>

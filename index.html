@@ -13,11 +13,11 @@
   <meta property="og:title" content="Аналитика селлера для Wildberries и Ozon">
   <meta property="og:description" content="Кабинет аналитики под экономику селлера: прибыль, реклама, остатки, план-факт и ИИ-советы по решениям.">
   <meta property="og:url" content="https://4vdata.ru/">
-  <meta property="og:image" content="https://4vdata.ru/assets/site-bg-reference.png?v=20260708-reference-ui">
+  <meta property="og:image" content="https://4vdata.ru/assets/og-4vdata.jpg?v=20260714">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Аналитика селлера для Wildberries и Ozon">
   <meta name="twitter:description" content="Индивидуальная аналитика селлера: прибыль, реклама, остатки, план-факт и ИИ-советы.">
-  <meta name="twitter:image" content="https://4vdata.ru/assets/site-bg-reference.png?v=20260708-reference-ui">
+  <meta name="twitter:image" content="https://4vdata.ru/assets/og-4vdata.jpg?v=20260714">
   <link rel="icon" href="assets/logo-mark.svg?v=20260708-logo" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/logo-mark.png?v=20260708-logo">
   <script type="application/ld+json">
@@ -31,7 +31,8 @@
         "url": "https://4vdata.ru/",
         "email": "info@4vdata.ru",
         "logo": "https://4vdata.ru/assets/logo.svg?v=20260708-logo",
-        "image": "https://4vdata.ru/assets/site-bg-reference.png?v=20260708-reference-ui"
+        "image": "https://4vdata.ru/assets/og-4vdata.jpg?v=20260714",
+        "founder": { "@id": "https://4vdata.ru/o-kompanii/#person" }
       },
       {
         "@type": "WebSite",
@@ -60,6 +61,17 @@
           "audienceType": "Селлеры Wildberries, Ozon и Яндекс Маркета"
         },
         "description": "Кабинет аналитики селлера, который считает прибыль по артикулам, рекламу, остатки, план-факт, расходы и помогает принимать решения по биддеру и репрайсеру."
+      },
+      {
+        "@type": "Person",
+        "@id": "https://4vdata.ru/o-kompanii/#person",
+        "name": "Руслан Гайфутдинов",
+        "honorificSuffix": "FCCA",
+        "url": "https://4vdata.ru/o-kompanii/",
+        "sameAs": [
+          "https://profi.ru/profile/GayfutdinovRV/",
+          "https://www.linkedin.com/in/ruslan-gaifutdinov-fcca-670609101/"
+        ]
       }
     ]
   }
@@ -95,12 +107,12 @@
       <span class="brand-wordmark">4V Data</span>
     </a>
     <nav class="nav" aria-label="Навигация">
-      <a href="#pain">Боли</a>
-      <a href="#solution">Решение</a>
-      <a href="#screens">Кабинет</a>
-      <a href="#start">Запуск</a>
+      <a href="analitika-ozon/">Ozon</a>
+      <a href="analitika-wildberries/">Wildberries</a>
+      <a href="keisy/individualnaya-analitika-sellera/">Кейс</a>
+      <a href="o-kompanii/">О компании</a>
     </nav>
-    <a class="top-cta" href="#contact">Обсудить задачу</a>
+    <a class="top-cta" href="#contact" data-goal="cta_contact">Обсудить задачу</a>
   </header>
 
   <main id="top">
@@ -110,8 +122,8 @@
         <h1>Индивидуальная аналитика для селлеров маркетплейсов</h1>
         <p class="lead">Считаем прибыль по артикулам, рекламу, остатки, план-факт и расходы по вашей логике. Не типовой сервис, а рабочий кабинет под ваш бизнес.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#contact">Получить разбор</a>
-          <a class="button secondary" href="ozon-seller-dashboard-demo.html" target="_blank" rel="noopener">Посмотреть пример</a>
+          <a class="button primary" href="#contact" data-goal="cta_contact">Получить разбор</a>
+          <a class="button secondary" href="ozon-seller-dashboard-demo.html" target="_blank" rel="noopener" data-goal="open_demo">Посмотреть пример</a>
         </div>
         <div class="hero-points" aria-label="Ключевые преимущества">
           <span>Без VPN</span>
@@ -436,7 +448,7 @@
           <li>Как сейчас считаете прибыль.</li>
           <li>Какие отчёты команда открывает каждый день.</li>
         </ul>
-        <a class="button primary full" href="mailto:info@4vdata.ru?subject=%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%D0%B5%D0%BB%D0%BB%D0%B5%D1%80%D0%B0">Обсудить проект</a>
+        <a class="button primary full" href="mailto:info@4vdata.ru?subject=%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%D0%B5%D0%BB%D0%BB%D0%B5%D1%80%D0%B0" data-goal="cta_contact">Обсудить проект</a>
         <div class="contact-links" aria-label="Контакты">
           <a href="https://t.me/Nfrtum" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram" data-tooltip="Telegram">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -467,7 +479,8 @@
 
   <footer class="footer">
     <span>4V Data</span>
-    <span>Индивидуальная аналитика селлера</span>
+    <span><a href="stoimost-i-process/">Стоимость и процесс</a> · <a href="bezopasnost-dannyh/">Безопасность</a> · <a href="privacy/">Персональные данные</a></span>
   </footer>
+  <script src="assets/site.js?v=20260714" defer></script>
 </body>
 </html>

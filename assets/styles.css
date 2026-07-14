@@ -1022,7 +1022,7 @@ figure,
 }
 
 :root {
-  --page-bg: url("site-bg-reference.png");
+  --page-bg: url("site-bg-reference.webp");
   --ref-ink: #3f2a1c;
   --ref-muted: rgba(74, 55, 42, .72);
   --ref-line: rgba(107, 82, 62, .52);
