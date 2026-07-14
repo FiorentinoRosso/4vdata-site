@@ -1676,13 +1676,13 @@ figure,
 
 @media (min-width: 761px) and (max-height: 940px) {
   .ref-card-row {
-    bottom: -34px;
+    bottom: -170px;
   }
 }
 
 @media (min-width: 761px) and (max-width: 1050px) and (max-height: 940px) {
   .ref-card-row {
-    bottom: -92px;
+    bottom: -170px;
   }
 }
 
@@ -1729,7 +1729,7 @@ figure,
   .ref-card-row {
     left: 12px;
     right: 12px;
-    bottom: -124px;
+    bottom: -190px;
     grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
