@@ -128,6 +128,11 @@ def main() -> int:
         if not asset.exists() or asset.stat().st_size > limit:
             errors.append(f"{name}: missing or over {limit} bytes")
 
+    event_script = (ROOT / "assets/site.js").read_text(encoding="utf-8")
+    for goal in {"cta_contact", "contact_email", "contact_telegram", "contact_whatsapp", "contact_max", "open_demo"}:
+        if goal not in event_script and not any(goal in page.read_text(encoding="utf-8") for page in pages):
+            errors.append(f"analytics: missing goal {goal}")
+
     if errors:
         print("SEO CHECK FAILED")
         print("\n".join(f"- {error}" for error in errors))
