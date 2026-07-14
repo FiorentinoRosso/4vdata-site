@@ -1096,7 +1096,7 @@ figcaption span,
   display: block;
   min-height: calc(100vh - 73px);
   margin: 0;
-  padding: 16px 5vw 316px;
+  padding: 16px 5vw 40px;
   border: 0;
   border-radius: 0;
   overflow: hidden;
@@ -1147,11 +1147,11 @@ figure,
 }
 
 .hero-visual.reference-board {
-  position: absolute;
-  inset: 0;
+  position: static;
   z-index: 1;
   display: block;
   max-width: none;
+  margin-top: 24px;
   padding: 0;
   overflow: visible;
   background: transparent;
@@ -1176,10 +1176,7 @@ figure,
 }
 
 .ref-card-row {
-  position: absolute;
-  left: 3.4vw;
-  right: 3.4vw;
-  bottom: 34px;
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
@@ -1662,28 +1659,13 @@ figure,
   }
 
   .hero {
-    padding-bottom: 560px;
+    padding-bottom: 36px;
   }
 
   .ref-note {
-    top: auto;
-    right: 5vw;
-    bottom: 300px;
-    width: min(280px, 42vw);
+    display: none;
   }
 
-}
-
-@media (min-width: 761px) and (max-height: 940px) {
-  .ref-card-row {
-    bottom: -170px;
-  }
-}
-
-@media (min-width: 761px) and (max-width: 1050px) and (max-height: 940px) {
-  .ref-card-row {
-    bottom: -170px;
-  }
 }
 
 @media (max-width: 760px) {
@@ -1697,7 +1679,7 @@ figure,
     width: 100%;
     min-height: auto;
     margin: 0;
-    padding: 34px 12px 830px;
+    padding: 34px 12px 32px;
   }
 
   .hero-copy,
@@ -1727,9 +1709,6 @@ figure,
   }
 
   .ref-card-row {
-    left: 12px;
-    right: 12px;
-    bottom: -190px;
     grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
