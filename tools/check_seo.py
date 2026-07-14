@@ -128,6 +128,16 @@ def main() -> int:
         if not asset.exists() or asset.stat().st_size > limit:
             errors.append(f"{name}: missing or over {limit} bytes")
 
+    seo_css = (ROOT / "assets/seo-pages.css").read_text(encoding="utf-8")
+    home_css = (ROOT / "assets/styles.css").read_text(encoding="utf-8")
+    if "site-bg-reference.png" in seo_css:
+        errors.append("seo-pages.css: legacy PNG background is still referenced")
+    if "min-height: 44px" not in seo_css or "min-height: 44px" not in home_css:
+        errors.append("navigation: 44px touch target rule is missing")
+    case_page = (ROOT / "keisy/individualnaya-analitika-sellera/index.html").read_text(encoding="utf-8")
+    if "case-turnover-dashboard-synthetic.png" not in case_page or "profi.ru/profile/GayfutdinovRV" not in case_page:
+        errors.append("case study: sanitized screenshot or review source is missing")
+
     event_script = (ROOT / "assets/site.js").read_text(encoding="utf-8")
     for goal in {"cta_contact", "contact_email", "contact_telegram", "contact_whatsapp", "contact_max", "open_demo"}:
         if goal not in event_script and not any(goal in page.read_text(encoding="utf-8") for page in pages):

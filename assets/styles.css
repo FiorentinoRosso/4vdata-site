@@ -220,7 +220,17 @@ a {
 }
 
 .nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   padding: 6px 0;
+}
+
+.nav a:focus-visible,
+.top-cta:focus-visible,
+.button:focus-visible {
+  outline: 3px solid rgba(107, 63, 33, .72);
+  outline-offset: 3px;
 }
 
 .nav a:hover {

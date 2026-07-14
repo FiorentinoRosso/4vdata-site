@@ -4,7 +4,7 @@
   --line: rgba(89, 51, 24, .22);
   --brown: #6b3f21;
   --gold: #b67b32;
-  --page-bg: url("site-bg-reference.png");
+  --page-bg: url("site-bg-reference.webp");
   --ref-glass: linear-gradient(145deg, rgba(255, 249, 232, .66), rgba(229, 205, 174, .42) 58%, rgba(255, 242, 214, .54));
   --ref-glass-soft: linear-gradient(145deg, rgba(255, 250, 235, .54), rgba(229, 205, 174, .30) 58%, rgba(255, 242, 214, .46));
   --ref-border: rgba(255, 252, 239, .66);
@@ -90,7 +90,50 @@ img {
 }
 
 .seo-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   text-decoration: none;
+}
+
+.seo-nav a:focus-visible,
+.seo-cta:focus-visible,
+.button:focus-visible {
+  outline: 3px solid rgba(107, 63, 33, .72);
+  outline-offset: 3px;
+}
+
+.case-figure {
+  margin: 24px 0 0;
+}
+
+.case-figure img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--ref-border);
+  border-radius: 14px;
+  box-shadow: var(--ref-shadow);
+}
+
+.case-figure figcaption,
+.source-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.review-card {
+  padding: 22px;
+  border: 1px solid var(--ref-border);
+  border-radius: 12px;
+  background: var(--ref-glass-soft);
+  box-shadow: var(--ref-shadow);
+}
+
+.review-card blockquote {
+  margin: 0 0 12px;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .seo-cta,
